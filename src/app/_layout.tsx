@@ -1,16 +1,17 @@
-import React from "react";
-import "@/styles/global.css";
-import { Slot } from "expo-router";
-import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { StatusBar } from "expo-status-bar";
-import { AppProvider } from "@/providers";
 import Loading from "@/components/Loading";
+import { AppProvider } from "@/providers";
+import { Slot } from "expo-router";
+import { StatusBar } from "expo-status-bar";
+import React from "react";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+
+import "../../global.css";
 
 import {
-  useFonts,
   Roboto_400Regular,
   Roboto_500Medium,
   Roboto_700Bold,
+  useFonts,
 } from "@expo-google-fonts/roboto";
 
 export default function Layout() {

@@ -25,7 +25,7 @@ type ValidMaterialIconName =
   | "filter-alt";
 
 type LabelProps = {
-  label: String;
+  label: string;
   iconName: ValidMaterialIconName;
 };
 

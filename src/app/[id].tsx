@@ -1,14 +1,10 @@
-import { View, Text, Image, Linking } from "react-native";
-import React, { useEffect, useState } from "react";
-import { useLocalSearchParams } from "expo-router";
-import { useMutation, useQuery } from "@tanstack/react-query";
-import { getNewsData } from "@/services/api";
-import Loading from "@/components/Loading";
-import { TouchableOpacity } from "react-native-gesture-handler";
-import { MaterialIcons } from "@expo/vector-icons";
-import { colors } from "@/styles/colors";
-import { router } from "expo-router";
 import { Button } from "@/components/IconLabelButton";
+import Loading from "@/components/Loading";
+import { getNewsData } from "@/services/api";
+import { useMutation } from "@tanstack/react-query";
+import { router, useLocalSearchParams } from "expo-router";
+import React, { useEffect, useState } from "react";
+import { Image, Linking, Text, View } from "react-native";
 
 export default function news() {
   const { id } = useLocalSearchParams();
