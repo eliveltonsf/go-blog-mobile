@@ -3,6 +3,8 @@ import "@/styles/global.css";
 import { Slot } from "expo-router";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { StatusBar } from "expo-status-bar";
+import { AppProvider } from "@/providers";
+import Loading from "@/components/Loading";
 
 import {
   useFonts,
@@ -10,7 +12,6 @@ import {
   Roboto_500Medium,
   Roboto_700Bold,
 } from "@expo-google-fonts/roboto";
-import Loading from "@/components/Loading";
 
 export default function Layout() {
   const [fontsLoaded] = useFonts({
@@ -26,7 +27,9 @@ export default function Layout() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <StatusBar style="light" />
-      <Slot />
+      <AppProvider>
+        <Slot />
+      </AppProvider>
     </GestureHandlerRootView>
   );
 }
