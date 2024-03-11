@@ -1,8 +1,8 @@
-import { ActivityIndicator } from "react-native";
 import React from "react";
+import { ActivityIndicator } from "react-native";
 
 export default function Loading() {
   return (
-    <ActivityIndicator className="flex-1 bg-primary items-center justify-center" />
+    <ActivityIndicator className="flex-1 text-primary items-center justify-center" />
   );
 }
